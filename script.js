@@ -21,6 +21,15 @@ function getGreeting() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Hide loader when page is loaded
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader-wrapper');
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    });
+
     // Mettre à jour le message de salutation
     const greetingElement = document.querySelector('.greeting');
     if (greetingElement) {

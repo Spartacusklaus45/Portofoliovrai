@@ -24,6 +24,55 @@ body {
     line-height: 1.6;
 }
 
+/* Loader */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFADA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+}
+
+.loader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 #000;
+    transition: all 0.3s ease;
+}
+
+.loader img {
+    width: 120px;
+    height: auto;
+    position: relative;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        transform: scale(1.1) translateY(-5px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
 /* Header & Navigation */
 header {
     padding: 1rem 5%;
@@ -160,9 +209,66 @@ nav {
     align-items: center;
     padding: 5rem 5%;
     gap: 2rem;
-    position: relative;
-    overflow: hidden;
-    background-color: #FFFADA;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgba(255, 217, 61, 0.15) 0%,
+                rgba(255, 217, 61, 0.05) 30%,
+                transparent 60%);
+    opacity: 0.8;
+    animation: glassLight 8s ease-in-out infinite alternate;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.2) 15%,
+                transparent 30%,
+                rgba(255, 255, 255, 0.2) 45%,
+                transparent 60%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 90%);
+    filter: blur(3px);
+    animation: glassShine 10s linear infinite;
+}
+
+@keyframes glassLight {
+    0% {
+        --x: 0%;
+        --y: 0%;
+    }
+    25% {
+        --x: 100%;
+        --y: 0%;
+    }
+    50% {
+        --x: 100%;
+        --y: 100%;
+    }
+    75% {
+        --x: 0%;
+        --y: 100%;
+    }
+    100% {
+        --x: 50%;
+        --y: 50%;
+    }
+}
+
+@keyframes glassShine {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(200%);
+    }
 }
 
 .hero-content {
@@ -1474,6 +1580,44 @@ section h2::after {
 }
 
 /* Skills Section */
+.glass-effect {
+    position: relative;
+    background: rgba(255, 250, 218, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 217, 61, 0.3);
+    overflow: hidden;
+}
+
+.glass-effect::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgba(255, 217, 61, 0.15) 0%,
+                rgba(255, 217, 61, 0.05) 30%,
+                transparent 60%);
+    opacity: 0.8;
+    animation: glassLight 8s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.glass-effect::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.2) 15%,
+                transparent 30%,
+                rgba(255, 255, 255, 0.2) 45%,
+                transparent 60%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 90%);
+    filter: blur(3px);
+    animation: glassShine 10s linear infinite;
+    pointer-events: none;
+}
+
 .skills {
     padding: 4rem 5%;
     text-align: center;
@@ -2836,21 +2980,22 @@ overflow: hidden;
     font-size: 0.9rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
-                0 0 20px rgba(255, 255, 255, 0.1),
-                0 0 30px rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 4px 4px 0 #fff;
 }
 
 .footer-text .contact-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 217, 61, 0.3),
-                0 0 15px rgba(255, 255, 255, 0.2),
-                0 0 30px rgba(255, 255, 255, 0.1);
+    top: -2px;
+    left: -2px;
+    box-shadow: 6px 6px 0 #fff;
 }
 
 .footer-social {
-    display: flex;
-    gap: 1rem;
+display: flex;
+gap: 1rem;
 }
 
 .footer-social .social-icon {
