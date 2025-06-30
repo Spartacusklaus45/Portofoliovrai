@@ -368,8 +368,9 @@ nav {
     }
 
     .hire-btn {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+        border-width: 1.5px;
     }
 
     .download-cv,
