@@ -1,6 +1,8 @@
 // Smooth scrolling for navigation links
-// Initialize EmailJS
-emailjs.init("KiYkIj8_ro6uZ10SC");
+// Initialize EmailJS with public key
+emailjs.init({
+    publicKey: "KiYkIj8_ro6uZ10SC"
+});
 
 // Fonction pour obtenir le message de salutation en fonction de l'heure
 function getGreeting() {
@@ -12,7 +14,7 @@ function getGreeting() {
     } else if (hour >= 18 && hour < 22) {
         return '👋 Bonsoir !';
     } else {
-        return '🌙 Bonne nuit !';
+        return '🌙 Bonsoir !';
     }
 }
 
@@ -285,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Send email using EmailJS
-        emailjs.send('service_6kiutxc', 'template_jw44ube', templateParams)
+        emailjs.sendForm('service_6kiutxc', 'template_jw44ube', this)
             .then(function() {
                 formStatus.textContent = 'Message envoyé avec succès!';
                 formStatus.classList.add('success');
