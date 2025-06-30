@@ -2,7 +2,26 @@
 // Initialize EmailJS
 emailjs.init("KiYkIj8_ro6uZ10SC");
 
+// Fonction pour obtenir le message de salutation en fonction de l'heure
+function getGreeting() {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12) {
+        return '👋 Bonjour !';
+    } else if (hour >= 12 && hour < 18) {
+        return '👋 Bon après-midi !';
+    } else if (hour >= 18 && hour < 22) {
+        return '👋 Bonsoir !';
+    } else {
+        return '🌙 Bonne nuit !';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Mettre à jour le message de salutation
+    const greetingElement = document.querySelector('.greeting');
+    if (greetingElement) {
+        greetingElement.textContent = getGreeting();
+    }
     // Système de filtrage des projets et slides
     function initializeProjects() {
         const filterButtons = document.querySelectorAll('.filter-btn');

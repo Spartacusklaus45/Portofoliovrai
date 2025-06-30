@@ -368,9 +368,10 @@ nav {
     }
 
     .hire-btn {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.7rem;
-        border-width: 1.5px;
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        border-width: 1px;
+        box-shadow: 2px 2px 0 #000;
     }
 
     .download-cv,
@@ -2319,8 +2320,8 @@ background-color: var(--primary-color);
 
 /* Portfolio Section */
 .portfolio {
-    padding: 4rem 5%;
-    margin-top: 4rem;
+    padding: 3rem 5%;
+    margin-top: 0rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
