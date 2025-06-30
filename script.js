@@ -270,44 +270,63 @@ document.addEventListener('DOMContentLoaded', function() {
     const formStatus = contactForm.querySelector('.form-status');
     const submitButton = contactForm.querySelector('.send-btn');
 
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        console.log('Formulaire soumis');
         
-        // Show loading state
-        submitButton.classList.add('loading');
-        submitButton.disabled = true;
-        formStatus.className = 'form-status';
-        formStatus.style.display = 'none';
+        try {
+            // Show loading state
+            submitButton.classList.add('loading');
+            submitButton.disabled = true;
+            formStatus.className = 'form-status';
+            formStatus.style.display = 'none';
 
-        // Prepare template parameters
-        const templateParams = {
-            from_name: this.user_name.value,
-            time: new Date().toLocaleString(),
-            from_email: this.user_email.value,
-            phone: this.user_phone.value,
-            project_type: this.project_type.value,
-            message: this.message.value,
-            title: 'Nouveau message du portfolio',
-            email: this.user_email.value
-        };
+            // Prepare template parameters
+            const templateParams = {
+                service_id: 'service_6kiutxc',
+                template_id: 'template_uibliho',
+                user_id: 'KiYkIj8_ro6uZ10SC',
+                template_params: {
+                    from_name: this.user_name.value,
+                    time: new Date().toLocaleString(),
+                    from_email: this.user_email.value,
+                    phone: this.user_phone.value,
+                    project_type: this.project_type.value,
+                    message: this.message.value,
+                    title: 'Nouveau message du portfolio',
+                    email: this.user_email.value
+                }
+            };
 
-        // Send email using EmailJS
-        emailjs.send('service_6kiutxc', 'template_uibliho', templateParams, 'KiYkIj8_ro6uZ10SC')
-            .then(function() {
-                formStatus.textContent = 'Message envoyé avec succès!';
-                formStatus.classList.add('success');
-                contactForm.reset();
-            })
-            .catch(function(error) {
-                formStatus.textContent = 'Une erreur est survenue. Veuillez réessayer.';
-                formStatus.classList.add('error');
-                console.error('EmailJS error:', error);
-            })
-            .finally(function() {
-                submitButton.classList.remove('loading');
-                submitButton.disabled = false;
-                formStatus.style.display = 'block';
+            console.log('Paramètres à envoyer:', templateParams);
+
+            // Send email using EmailJS
+            const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(templateParams)
             });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.text();
+            console.log('Succès:', result);
+            formStatus.textContent = 'Message envoyé avec succès!';
+            formStatus.classList.add('success');
+            contactForm.reset();
+        } catch (error) {
+            console.error('Erreur détaillée:', error);
+            formStatus.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+            formStatus.classList.add('error');
+        } finally {
+            submitButton.classList.remove('loading');
+            submitButton.disabled = false;
+            formStatus.style.display = 'block';
+        }
     });
 
     // Add hover effects to buttons
