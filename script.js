@@ -1,8 +1,10 @@
 // Smooth scrolling for navigation links
 // Initialize EmailJS with public key
-emailjs.init({
-    publicKey: "KiYkIj8_ro6uZ10SC"
-});
+(function() {
+    emailjs.init({
+        publicKey: "KiYkIj8_ro6uZ10SC",
+    });
+})();
 
 // Fonction pour obtenir le message de salutation en fonction de l'heure
 function getGreeting() {
@@ -280,14 +282,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prepare template parameters
         const templateParams = {
             from_name: this.user_name.value,
+            time: new Date().toLocaleString(),
             from_email: this.user_email.value,
             phone: this.user_phone.value,
             project_type: this.project_type.value,
-            message: this.message.value
+            message: this.message.value,
+            title: 'Nouveau message du portfolio',
+            email: this.user_email.value
         };
 
         // Send email using EmailJS
-        emailjs.sendForm('service_6kiutxc', 'template_jw44ube', this)
+        emailjs.send('service_6kiutxc', 'template_uibliho', templateParams, 'KiYkIj8_ro6uZ10SC')
             .then(function() {
                 formStatus.textContent = 'Message envoyé avec succès!';
                 formStatus.classList.add('success');
