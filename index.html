@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Assogba - Portfolio</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/marcelassogba.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/marcelassogba.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/marcelassogba.png">
+    <link rel="manifest" href="assets/marcelassogba.png">
+    <meta name="theme-color" content="#FFD93D">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#hero">
+                    <img src="assets/marcelassogba.png" alt="marcelassogba">
+                </a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="#hero">Accueil</a>
+                    <a href="#what-i-do">Compétences</a>
+                    <a href="#experience">Expériences</a>
+                    <a href="#selected-project">Projets</a>
+                </div>
+                <div class="nav-right">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/marcel-assogba-b19919220" target="_blank" class="social-icon"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="https://wa.me/2250172480623" target="_blank" class="social-icon"><img src="assets/whatsapp.svg" alt="WhatsApp"></a>
+                    </div>
+                    <a href="#contact" class="hire-btn">Travaillons ensemble</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="greeting">👋 Bonjour !</p>
+                <h1>Je suis <span class="highlight animated-text">
+    <span class="text">Marcel Assogba</span>
+    <span class="logo">
+        <img src="assets/marcelassogba.png" alt="Logo MA" class="logo-img">
+    </span>
+</span></h1>
+                <p class="subtitle"><span>Spécialiste en Marketing Digital</span><span class="separator"> | </span><span>Développeur Web</span><span class="separator"> | </span><span>Designer UI/UX</span></p>
+                <div class="hero-buttons">
+                    <a href="assets/cv-marcel-assogba.pdf" download class="download-cv">
+                        <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16L7 11H17L12 16Z" fill="currentColor"/>
+                            <path d="M12 3V11M12 16L7 11H17L12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Télécharger CV
+                    </a>
+                    <a href="assets/portfolio-marcel-assogba.pdf" download class="download-portfolio">
+                        <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16L7 11H17L12 16Z" fill="currentColor"/>
+                            <path d="M12 3V11M12 16L7 11H17L12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Télécharger Portfolio
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/marceassogbaprofil.png" alt="marcelassogba" class="profile-pic">
+                <div class="chat-bubble">
+                    <div class="chat-messages">
+                        <div class="message-group">
+                            <p class="chat-text">👋 Hey! Je suis Marcel, expert en marketing digital et développement web</p>
+                            <p class="chat-text">Prêt à transformer vos idées en réalité !</p>
+                        </div>
+                        <div class="message-group">
+                            <p class="chat-text">🚀 Besoin d'une stratégie digitale performante pour votre entreprise ?</p>
+                            <p class="chat-text">Je vous accompagne vers le succès !</p>
+                        </div>
+                        <div class="message-group">
+                            <p class="chat-text">💡 Un projet web innovant ? Une refonte de site ? Une app mobile ?</p>
+                            <p class="chat-text">Faisons émerger votre vision ensemble !</p>
+                        </div>
+                        <div class="message-group">
+                            <p class="chat-text">🎯 Expert en marketing digital & développement sur mesure</p>
+                            <p class="chat-text">Démarrons votre projet maintenant !</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/2250172480623" target="_blank" class="chat-cta">
+                        <img src="assets/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                        Parlons-en maintenant
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="info-bar">
+            <div class="info-bar-content">
+                <span class="info-item"><span class="dot"></span>STRATÉGIE DIGITALE</span>
+                <span class="info-item"><span class="dot"></span>DÉVELOPPEMENT WEB</span>
+                <span class="info-item"><span class="dot"></span>DESIGN UI/UX</span>
+                <span class="info-item"><span class="dot"></span>MARKETING DIGITAL</span>
+                <span class="info-item"><span class="dot"></span>STRATÉGIE DIGITALE</span>
+                <span class="info-item"><span class="dot"></span>DÉVELOPPEMENT WEB</span>
+                <span class="info-item"><span class="dot"></span>DESIGN UI/UX</span>
+                <span class="info-item"><span class="dot"></span>MARKETING DIGITAL</span>
+            </div>
+        </div>
+
+        <section id="what-i-do" class="what-i-do">
+            <h2>Ce que je fais</h2>
+            <div class="title-decoration">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="section-content">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/strategie.png" alt="Stratégie Digitale">
+                        </div>
+                        <h3>Stratégie Digitale</h3>
+                        <p>Je crée des campagnes impactantes : concept, direction créative, influence, lancement produit, suivi de performance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/uiux.png" alt="UI/UX & Contenu">
+                        </div>
+                        <h3>UI/UX & Contenu</h3>
+                        <p>Je conçois des interfaces modernes et supervise la production de visuels (vidéo, photo, animation) pour le digital.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/dev.png" alt="Développement Web">
+                        </div>
+                        <h3>Développement Web</h3>
+                        <p>Je développe des sites rapides et responsives avec React, Next.js, Tailwind et Node.js.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Compétences</h2>
+            <div class="title-decoration">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="section-content">
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-icon">
+                        <span class="skill-name">Figma</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" alt="Premiere Pro" class="skill-icon">
+                        <span class="skill-name">Premiere Pro</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="skill-icon">
+                        <span class="skill-name">Photoshop</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/tiktok-icon.svg" alt="TikTok" class="skill-icon">
+                        <span class="skill-name">TikTok</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/meta-ads-icon.svg" alt="Facebook/Meta Ads" class="skill-icon">
+                        <span class="skill-name">Meta Ads</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" alt="After Effects" class="skill-icon">
+                        <span class="skill-name">After Effects</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/canva.png" alt="Canva" class="skill-icon">
+                        <span class="skill-name">Canva</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator" class="skill-icon">
+                        <span class="skill-name">Illustrator</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
+                        <span class="skill-name">React.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="skill-icon">
+                        <span class="skill-name">Next.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/office-icon.svg" alt="Microsoft Office" class="skill-icon">
+                        <span class="skill-name">Microsoft Office</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/english-icon.svg" alt="Anglais" class="skill-icon">
+                        <span class="skill-name">Anglais</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">
+                        <span class="skill-name">Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon">
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">
+                        <span class="skill-name">Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
+                        <span class="skill-name">Bootstrap</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/tailwing.png" alt="Tailwind" class="skill-icon">
+                        <span class="skill-name">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <h2>À propos de moi</h2>
+            <div class="title-decoration">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="about-content">
+                <p>Je suis Marcel, passionné de digital à Abidjan, avec plus de 3 ans d’expérience en campagnes créatives et développement web.</p>
+                <p>J’ai piloté les lancements des smartphones TECNO (CAMON, SPARK, PHANTOM, POP), en gérant contenu, direction artistique, stratégie social media (TikTok, Facebook, Instagram, YouTube) et création de pages web axées performance.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Expériences</h2>
+            <div class="title-decoration">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="section-content">
+                <div class="experience-items">
+                    <div class="experience-item">
+                        <div class="year">Depuis 2023</div>
+                        <button class="expand-btn"></button>
+                        <div class="experience-content">
+                            <div class="job-header">
+                                <h3>Freelance</h3>
+                            </div>
+                            <p class="company">Abidjan</p>
+                            <p class="description">Gestion de campagnes digitales pour TECNO Mobile Côte d'Ivoire. Direction créative, production de contenu, et stratégie de communication.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="year">2023</div>
+                        <button class="expand-btn"></button>
+                        <div class="experience-content">
+                            <div class="job-header">
+                                <h3>Freelance UI/UX & Développement Web</h3>
+                            </div>
+                            <p class="company">Abidjan</p>
+                            <p class="description">Conception et développement de sites web avec React, Next.js, Tailwind. Projets pour des PME, artistes, et startups tech.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="year">2020</div>
+                        <button class="expand-btn"></button>
+                        <div class="experience-content">
+                            <div class="job-header">
+                                <h3>Formation en Développement Web</h3>
+                            </div>
+                            <p class="company">Abidjan</p>
+                            <p class="description">Apprentissage des bases du développement front-end et UI/UX, introduction aux design systems et outils modernes (HTML, CSS, Figma).</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="year">2020</div>
+                        <button class="expand-btn"></button>
+                        <div class="experience-content">
+                            <div class="job-header">
+                                <h3>Projets de formation – Développement Web</h3>
+                            </div>
+                            <p class="company">Abidjan</p>
+                            <p class="description">Réalisation de mini-projets pratiques : landing pages, dashboards simples, portfolio personnel. Mise en pratique avec Git, React et Tailwind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="selected-project" class="portfolio">
+            <h2>Projets Sélectionnés</h2>
+            <div class="title-decoration">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="section-content">
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="digital">Campagnes Digital</button>
+                    <button class="filter-btn" data-filter="ai">TECNO AI</button>
+                    <button class="filter-btn" data-filter="web">Développement Web</button>
+                </div>
+                <div class="project-showcase">
+                    <div class="project-info">
+                        <div class="project-text active" data-category="digital">
+                            <h3>Campagnes Digital TECNO</h3>
+                            <div class="campaign-slides">
+                                <div class="campaign-slide active" data-slide="1">
+                                    <h4>CAMON 40 Series (2024)</h4>
+                                    <p>Stratégie TikTok, Facebook, Instagram et activations terrain.<br><br>
+                                    +15 millions de vues sur TikTok<br>
+                                    +70 000 abonnés gagnés<br>
+                                    +30 millions de vues sur Facebook<br>
+                                    +15 millions de vues via les influenceurs<br><br>
+                                    → Création de vidéos virales, lives, activations, direction artistique.</p>
+                                    <div class="project-image">
+                                        <img src="assets/camon 40.png" alt="CAMON 40 Series Project">
+                                    </div>
+                                </div>
+                                <div class="campaign-slide" data-slide="2">
+                                    <h4>SPARK 20 & SPARK 30 Series (2023 – 2024)</h4>
+                                    <p>Campagnes orientées jeunesse et lifestyle, avec des vidéos challenges TikTok, des formats Reels Instagram et des lives en boutique.<br><br>
+                                    → Création de contenus avec influenceurs locaux, activation sur les campus, couverture d'événements TECNO dans les quartiers.<br><br>
+                                    +12M de vues cumulées<br>
+                                    Engagement fort sur les vidéos humoristiques et challenges</p>
+                                    <div class="project-image">
+                                        <img src="assets/spark-project.png" alt="SPARK Series Project">
+                                    </div>
+                                </div>
+                                <div class="campaign-slide" data-slide="3">
+                                    <h4>PHANTOM X2 & V Fold Series (2023)</h4>
+                                    <p>Lancement haut de gamme avec une approche premium : contenus élégants, focus sur les fonctionnalités pro (zoom, performance, design).<br><br>
+                                    → Tournages vidéos en intérieur/studio, mise en avant du lifestyle pro, storytelling, et démos de fonctionnalités IA.<br><br>
+                                    +5M de vues ciblées<br>
+                                    Bonne réception sur les contenus en slow motion et vidéos de test produit</p>
+                                    <div class="project-image">
+                                        <img src="assets/phantom-project.png" alt="PHANTOM Series Project">
+                                    </div>
+                                </div>
+                                <div class="campaign-slide" data-slide="4">
+                                    <h4>CAMON 30 Series (2023)</h4>
+                                    <p>Campagne orientée photo & création : mise en avant des performances caméra.<br><br>
+                                    → Série de vidéos "avant/après", battle de photo, comparaisons avec d'autres marques.<br><br>
+                                    +9M vues TikTok / Facebook<br>
+                                    Hausse de l'interaction sur les formats avant/après et les face-à-face</p>
+                                    <div class="project-image">
+                                        <img src="assets/camon30-project.png" alt="CAMON 30 Series Project">
+                                    </div>
+                                </div>
+                                <div class="campaign-slide" data-slide="5">
+                                    <h4>POP 9 & 10 (2023 – 2024)</h4>
+                                    <p>Contenus fun et accessibles pour un public jeune : unboxing colorés, tutos rapides, storytelling comique en situation réelle.<br><br>
+                                    → Capsules vidéos dans les marchés, écoles, quartiers populaires.<br><br>
+                                    +6M de vues<br>
+                                    Très bon taux d'engagement sur TikTok et Facebook</p>
+                                    <div class="project-image">
+                                        <img src="assets/pop-project.png" alt="POP Series Project">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-nav">
+                                <button class="slide-dot active" data-slide="1"></button>
+                                <button class="slide-dot" data-slide="2"></button>
+                                <button class="slide-dot" data-slide="3"></button>
+                                <button class="slide-dot" data-slide="4"></button>
+                                <button class="slide-dot" data-slide="5"></button>
+                            </div>
+                            <button class="more-btn">Plus de détails →</button>
+                        </div>
+                        <div class="project-text" data-category="ai">
+                            <h3>Lancement TECNO AI (2024)</h3>
+                            <p>Création de contenus pédagogiques pour expliquer les fonctionnalités IA (FlashSnap, AI Eraser, réduction de bruit) à travers des formats courts, dynamiques et interactifs.</p>
+                            <div class="project-image mobile-only">
+                                <img src="assets/tecno-ai-project.png" alt="TECNO AI Project">
+                            </div>
+                            <button class="more-btn">Plus de détails →</button>
+                        </div>
+                        <div class="project-text" data-category="web">
+                            <h3>Projets Développement Web</h3>
+                            <p>Landing pages et sites vitrines pour artistes et PME.<br>
+                            → Réalisés avec HTML, CSS, Tailwind, Next.js<br><br>
+                            Web apps avec dashboard :<br>
+                            - Application de suivi de santé<br>
+                            - Tableau de bord analytique<br>
+                            - Mini blog dynamique</p>
+                            <div class="project-image mobile-only">
+                                <img src="assets/web-dev-project.png" alt="Web Development Projects">
+                            </div>
+                            <button class="more-btn">Plus de détails →</button>
+                        </div>
+                    </div>
+
+                    <div class="project-display">
+                        <div class="project-card-container">
+                            <div class="project-card active" data-category="digital" data-slide="1">
+                                <img src="assets/camon40-project.webp" alt="CAMON 40 Series Project">
+                            </div>
+                            <div class="project-card" data-category="digital" data-slide="2">
+                                <img src="assets/spark-project.png" alt="SPARK Series Project">
+                            </div>
+                            <div class="project-card" data-category="digital" data-slide="3">
+                                <img src="assets/phantom-project.png" alt="PHANTOM Series Project">
+                            </div>
+                            <div class="project-card" data-category="digital" data-slide="4">
+                                <img src="assets/camon30-project.png" alt="CAMON 30 Series Project">
+                            </div>
+                            <div class="project-card" data-category="digital" data-slide="5">
+                                <img src="assets/pop-project.png" alt="POP Series Project">
+                            </div>
+                            <div class="project-card" data-category="ai">
+                                <img src="assets/tecno-ai-project.png" alt="TECNO AI Project">
+                            </div>
+                            <div class="project-card" data-category="web">
+                                <img src="assets/web-dev-project.png" alt="Web Development Projects">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Décrivez Votre Projet</h2>
+                    <div class="title-decoration">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="info-item">
+                        <h3>numéro</h3>
+                        <a href="tel:+225 0172480623">
+                            <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            +225 0172480623
+                        </a>
+                    </div>
+                    <div class="info-item">
+                        <h3>e-mail</h3>
+                        <a href="mailto:marcelmedia01@gmail.com">
+                            <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            marcelmedia01@gmail.com
+                        </a>
+                    </div>
+                    <div class="info-item">
+                        <h3>réseaux sociaux</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+                            <a href="#" class="social-icon"><img src="assets/whatsapp.svg" alt="WhatsApp"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <input type="text" name="user_name" placeholder="Entrez votre nom" required>
+                        <input type="email" name="user_email" placeholder="Entrez votre email" required>
+                        <input type="tel" name="user_phone" placeholder="Entrez votre numéro de téléphone" required>
+                        <select name="project_type" required>
+                            <option value="" disabled selected>Choisissez votre projet</option>
+                            <option value="digital">Campagnes Digital</option>
+                            <option value="discussion">Discussion</option>
+                            <option value="web">Développement Web</option>
+                        </select>
+                        <textarea name="message" placeholder="Description de votre projet" required></textarea>
+                        <button type="submit" class="send-btn">Envoyer</button>
+                        <div class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-image">
+                <img src="assets/footer.png" alt="marcelassogba">
+            </div>
+            <div class="footer-right">
+                <div class="footer-text">
+                    <h2>Un projet en tête ?</h2>
+                    <h3>Contactez moi maintenant!</h3>
+                    <a href="#contact" class="contact-btn">Contactez moi</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/2250172480623" class="social-icon"><img src="assets/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#" class="social-icon"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
