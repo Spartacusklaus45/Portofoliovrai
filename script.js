@@ -21,6 +21,40 @@ function getGreeting() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Menu burger functionality
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navContainer = document.querySelector('.nav-container');
+    const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-nav-item, .nav-right a');
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        navContainer.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking on links and scroll to section
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Ferme le menu
+            menuBtn.classList.remove('active');
+            navContainer.classList.remove('active');
+            document.body.classList.remove('menu-open');
+
+            // Si le lien a un attribut href qui commence par #
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+                if (targetSection) {
+                    // Petit délai pour laisser le menu se fermer
+                    setTimeout(() => {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }, 300);
+                }
+            }
+        });
+    });
+
     // Hide loader when page is loaded
     window.addEventListener('load', function() {
         const loader = document.querySelector('.loader-wrapper');
